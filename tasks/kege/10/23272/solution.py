@@ -1,8 +1,5 @@
-def solve(*args, **kwargs):
-    """
-    Основная логика решения.
-    """
-    
+from ipaddress import ip_network
 
-if __name__ == "__main__":
-    print(solve())
+net = ip_network('205.99.68.249/255.255.248.0', strict=False)
+ip_net = net.broadcast_address
+print(ip_net)
